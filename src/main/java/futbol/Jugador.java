@@ -19,15 +19,18 @@ public class Jugador extends Futbolista {
 		return false;
 	}
 
-	@Override
-	public int compareTo(Futbolista f) {
-		// TODO Auto-generated method stub
-		return this.getEdad()-f.getEdad();
-	}
+	
 	
 	public String toString() {
 		return "El futbolista "+this.getNombre()+" tiene "+this.getEdad()+", y juega de "+this.getPosicion()+" con el dorsal "+dorsal+". Ha marcado "+golesMarcados+" goles";
 	}
+
+	@Override
+	public int compareTo(Object f) {
+		Jugador f1=(Jugador) f; 
+		return this.getEdad()-f1.getEdad();
+	}
+		
 	
 
 }
