@@ -6,8 +6,8 @@ public class Portero extends Futbolista {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Portero(String nombre, int edad, String posicion,short golesRecibidos,byte dorsal) {
-		super(nombre, edad, posicion);
+	public Portero(String nombre, int edad,short golesRecibidos,byte dorsal) {
+		super(nombre, edad, "Portero");
 		this.dorsal=dorsal;
 		this.golesRecibidos=golesRecibidos;
 	}
@@ -18,13 +18,7 @@ public class Portero extends Futbolista {
 		return true;
 	}
 
-	public int compareTo(Futbolista f) {
-		
-			Portero p=(Portero) f;
-			return (int) this.golesRecibidos-p.golesRecibidos;
-		
-		
-	}
+	
 	public String toString() {
 		return "El futbolista "+this.getNombre()+" tiene "+this.getEdad()+", y juega de "+this.getPosicion()+" con el dorsal "+dorsal+" .Le han marcado "+golesRecibidos;
 	}
