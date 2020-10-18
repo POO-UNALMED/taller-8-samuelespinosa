@@ -5,7 +5,7 @@ public abstract class Futbolista<T> implements Comparable<T> {
 	private final String posicion;
 	public abstract boolean jugarConLasManos();
 	public Futbolista() {
-		this("Maradona",30,"Delantero");
+		this("Maradona",30,"delantero");
 	}
 	public Futbolista(String nombre, int edad, String posicion) {
 		super();
