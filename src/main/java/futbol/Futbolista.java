@@ -1,5 +1,5 @@
 package futbol;
-public abstract class Futbolista<T> implements Comparable<T> {
+public abstract class Futbolista implements Comparable<Futbolista> {
 	private String nombre;
 	private int edad;
 	private final String posicion;
@@ -16,12 +16,12 @@ public abstract class Futbolista<T> implements Comparable<T> {
 
 
 	
-	public boolean equals(Futbolista<T> f) {
-		int x=0;
-		x+=this.nombre.compareTo(f.nombre);
-		x+=this.posicion.compareTo(f.posicion);
-		x+=Integer.compare(edad, f.edad);
-		if (x==0) {return true;}else {return false;}
+	public boolean equals(Futbolista f) {
+		
+		int x=this.nombre.compareTo(f.nombre);
+		int y=this.posicion.compareTo(f.posicion);
+		int z=Integer.compare(edad, f.edad);
+		if (x==0 && y==0 && z==0) {return true;}else {return false;}
 	}
 	
 	public String toString() {
